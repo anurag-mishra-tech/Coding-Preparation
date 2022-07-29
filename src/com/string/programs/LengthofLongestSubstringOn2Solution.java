@@ -4,7 +4,7 @@ package com.string.programs;
 public class LengthofLongestSubstringOn2Solution {
 	// Driver code
 	public static void main(String[] args) {
-		String str = "geeksforgeeks";
+		String str = "abcda";
 		System.out.println("The input string is " + str);
 
 		int len = longestUniqueSubsttr(str);
