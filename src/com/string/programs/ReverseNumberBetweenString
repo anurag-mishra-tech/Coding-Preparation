@@ -1,0 +1,29 @@
+package com.string.programs;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ReverseNumberBetweenString {
+	public static void main(String[] args) {
+		String str = "abc123efg768nk";
+		String out = numbersInverted(str);
+		System.out.println(out);
+	}
+
+	static String numbersInverted(String str) {
+		StringBuilder sb = new StringBuilder();
+		Matcher matcher = Pattern.compile("\\d+").matcher(str);
+		int lastInitialPos = 0;
+		while (matcher.find()) {
+			int start = matcher.start();
+			String inverted = new StringBuilder(matcher.group()).reverse().toString();
+			sb.append(str.substring(lastInitialPos, start)).append(inverted);
+			lastInitialPos = matcher.end();
+		}
+		if (sb.length() == 0) // If no number was found
+			return str;
+		else
+			return sb.append(str.substring(lastInitialPos)).toString();
+	}
+
+}
