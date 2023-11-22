@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 public class ReverseNumberBetweenString {
 	public static void main(String[] args) {
 		String str = "abc123efg768nk";
-		String out = numbersInverted(str);
-		System.out.println(out);
+		String output = numbersInverted(str);
+		System.out.println(output);
 	}
 
 	static String numbersInverted(String str) {
